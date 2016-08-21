@@ -1,18 +1,30 @@
 <!doctype html>
 <title>HT6</title>
 <body>
-<script src="scripts/jquery-3.1.0.js"></script>
-<script src="scripts/vue.js"></script>
-<script src="scripts/vue-resource.min.js"></script>
-<script>
-</script>
+	<link rel="stylesheet" href="styles/bootstrap.css">
+	<link rel="stylesheet" href="styles/smt-bootstrap.css">
 
-<iframe id="download_frame" style="display:none;"></iframe>
+	<script src="scripts/jquery-3.1.0.js"></script>
+	<script src="scripts/bootstrap.min.js"></script>
+	<script src="scripts/vue.js"></script>
+	<script src="scripts/vue-resource.min.js"></script>
 
-<div id="app">
-    {{ message }}
-    <button v-on:click="requestModel">Get</button>
-</div>
+	<iframe id="download_frame" style="display:none;"></iframe>
 
-<script src="scripts/app.js"></script>
+	<nav class="navbar navbar-inverse">
+		<div class="container">
+			<div class="navbar-header">
+				<a class="navbar-brand" href="#">3D Model Resizer</a>
+			</div>
+		</div>
+	</nav>
+
+	<div class="container">
+		<div id="app">
+			{{ message }}
+			<button v-on:click="requestModel">Get</button>
+		</div>
+	</div>
+
+	<script src="scripts/app.js"></script>
 </body>
