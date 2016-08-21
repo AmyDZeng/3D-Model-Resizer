@@ -62,6 +62,7 @@
     
     <div class="container">
         {{ message }}
+        {{ swordLength }}
         <div class="row">
             <div class="col-sm-4">
                 <div class="bs-component">
@@ -76,7 +77,7 @@
                         </div>
                         <div class="card-content" id="sword-params" style="display:none;">
                             <label for="length">Length:</label>
-                            <input type="number" required></input>
+                            <input type="number" v-model="swordLength" required></input>
                         </div>
                         <div class="card-extra card-content" style="text-align:center">
                             <a><button class="btn btn-primary" id="sword-customize" v-on:click="customizeSword">Customize</button></a>
@@ -98,9 +99,9 @@
                         </div>
                         <div class="card-content" id="guard-params" style="display:none;">
                             <label for="wrist">Wrist Radius:</label>
-                            <input type="number" required></input>
+                            <input type="number" v-model="wristRadius" required></input>
                             <label for="forearm">Forearm Radius:</label>
-                            <input type="number" required></input>
+                            <input type="number" v-model="forearmRadius" required></input>
                         </div>
                         <div class="card-extra card-content" style="text-align:center">
                             <a><button class="btn btn-primary" id="guard-customize" v-on:click="customizeGuard">Customize</button></a>

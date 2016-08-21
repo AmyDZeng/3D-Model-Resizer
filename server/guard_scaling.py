@@ -16,13 +16,16 @@ argv = argv[argv.index("--") + 1:]  # get all args after "--"
 #filepath = os.path.join(root_dir, 'generated', 'model' + '_' + str(int(time.time())) + '.obj')
 
 filepath = argv[0]
+radiusWrist = int(argv[1])
+radiusForearm = int(argv[2])
+
+print("WRIST RADIUSSS " + str(radiusWrist))
+print("FOREARMM RADIUSSS " + str(radiusForearm))
 
 obj = bpy.data.objects["Guard"]
 
 mesh = obj.data
 
-radiusWrist = 2
-radiusForearm = 4
 for vert in mesh.vertices:
 	newV = vert.co
 

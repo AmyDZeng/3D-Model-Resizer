@@ -8,7 +8,7 @@ new Vue({
     },
     methods: {
         requestSword: function() {
-            this.$http.get('http://10.71.134.218:5000/sword/').then((response) => {
+            this.$http.get('http://10.71.134.218:5000/sword/?length=' + this.swordLength).then((response) => {
                 this.message = response.text()
                 document.getElementById('download_frame').src = response.text();
             }, (response) => {
@@ -16,7 +16,7 @@ new Vue({
             });
         },
         requestGuard: function() {
-            this.$http.get('http://10.71.134.218:5000/guard/').then((response) => {
+            this.$http.get('http://10.71.134.218:5000/guard/?wrist=' + this.wristRadius + "&forearm=" + this.forearmRadius).then((response) => {
                 this.message = response.text()
                 document.getElementById('download_frame').src = response.text();
             }, (response) => {
