@@ -1,7 +1,10 @@
 new Vue({
     el: '#app',
     data: {
-        message: ''
+        message: '',
+        swordLength: 0,
+        wristRadius: 0,
+        forearmRadius: 0
     },
     methods: {
         requestSword: function() {
@@ -21,31 +24,20 @@ new Vue({
             });
         },
         customizeSword: function () {
-            var newHTML = '<div class="card-content">'+
-                '<label for="length">Length:</label>' + 
-                '<input type="number" required></input>'+
-                '</div>';
-            $('#sword').replaceWith(newHTML);
+            $('#sword').hide();
+            $('#sword-params').show();
             $('#sword-customize').hide();
             $('#sword-download').show();
         },
         customizeSword2: function () {
-            var newHTML = '<div class="card-content">'+
-                '<label for="length">Length:</label>' + 
-                '<input type="number" required></input>'+
-                '</div>';
-            $('#sword2').replaceWith(newHTML);
+            $('#sword2').hide();
+            $('#sword2-params').show();
             $('#sword2-customize').hide();
             $('#sword2-download').show();
         },
         customizeGuard: function () {
-            var newHTML = '<div class="card-content">'+
-                '<label for="wrist">Wrist Radius:</label>' + 
-                '<input type="number" required></input>'+
-                '<label for="forearm">Forearm Radius:</label>' + 
-                '<input type="number" required></input>'+
-                 '</div>';
-            $('#guard').replaceWith(newHTML);
+            $('#guard').hide();
+            $('#guard-params').show();
             $('#guard-customize').hide();
             $('#guard-download').show();
         }
