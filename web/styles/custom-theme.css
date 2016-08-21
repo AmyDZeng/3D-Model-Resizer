@@ -2,10 +2,10 @@
 	position: relative;
 	min-height: 50px;
 	margin-bottom: 20px;
-	padding-left: 80px;
 	border: 1px solid transparent;
 	background: #000000;
 	text-align: center;
+	border-radius: 0;
 }
 
 #app {
