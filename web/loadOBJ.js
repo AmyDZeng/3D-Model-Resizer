@@ -20,7 +20,7 @@ function init() {
     
     document.body.appendChild( container );
     
-    camera = new THREE.PerspectiveCamera( 45, window.innerWidth / window.innerHeight, 1, 2000 );
+    camera = new THREE.PerspectiveCamera( 45, 250/350, 1, 2000 );
     camera.position.z = 250;
     
     // scene
@@ -84,11 +84,10 @@ function init() {
                 
                 }, onProgress, onError );
     
-    //
     
     renderer = new THREE.WebGLRenderer();
     renderer.setPixelRatio( window.devicePixelRatio );
-    renderer.setSize( window.innerWidth * 0.75 , window.innerHeight * 0.75 );
+    renderer.setSize( 350 , 250 );
     
     container.appendChild( renderer.domElement );
     
