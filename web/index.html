@@ -107,9 +107,10 @@
         
         <div class="w3-content" style="max-width:800px;position:relative">
             
-            <img class="mySlides w3-animate-opacity" src="images/prop1.jpg" style="width: 100%; display: none;">
+            <img class="mySlides w3-animate-opacity" src="images/prop1.jpg" style="width: 100%; display: block;">
                 <img class="mySlides w3-animate-opacity" src="images/prop2.jpg" style="width: 100%; display: none;">
-                    <img class="mySlides w3-animate-opacity" src="images/prop3.jpg" style="width: 100%; display: block;">
+                    <img class="mySlides w3-animate-opacity" src="images/prop3.jpg" style="width: 100%; display: none;">
+                        <img class="mySlides w3-animate-opacity" src="images/prop4.jpg" style="width: 100%; display: none;">
                             
                             <a class="w3-btn-floating w3-hover-dark-grey" style="position:absolute;top:45%;left:0;" onclick="plusDivs(-1)"><</a>
                             <a class="w3-btn-floating w3-hover-dark-grey" style="position:absolute;top:45%;right:0;" onclick="plusDivs(+1)">></a>
@@ -124,7 +125,7 @@
     
     <script>
     // Slideshows
-    var slideIndex = 1;
+    var slideIndex = 3;
     
     function plusDivs(n) {
         slideIndex = slideIndex + n;
@@ -141,7 +142,7 @@
         x[slideIndex-1].style.display = "block";
     }
     
-    showDivs(1);
+    showDivs(3);
 
     </script>
 
