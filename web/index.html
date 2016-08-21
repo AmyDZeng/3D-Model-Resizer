@@ -8,7 +8,6 @@
 
     <!-- Header -->
 
-    <div id="app">
 
 	<script src="scripts/jquery-3.1.0.js"></script>
 	<script src="scripts/bootstrap.min.js"></script>
@@ -26,6 +25,7 @@
     <script src="scripts/three.js"></script>
     <script src="js/loaders/OBJLoader.js"></script>
     
+    <div id="app">
 	<nav class="navbar">
 		<div class="container">
 			<div class="navbar-header navbar-inverse">
@@ -45,13 +45,14 @@
                         <div class="card-image">
                             <img src="images/sword.jpg">
                                 </div>
-                        <div class="card-content">
+                        <div class="card-content" id="sword">
                             <a class="card-header">Medieval Sword</a>
                             <div class="card-meta">Submitted on August 21</div>
                             <div class="card-description">A sharp sword to cut things with. Ooo pointy.</div>
                         </div>
                         <div class="card-extra card-content" style="text-align:center">
-                            <a><button class="btn btn-primary" v-on:click="requestModel">Customize</button></a>
+                            <a><button class="btn btn-primary" id="sword-customize" v-on:click="customizeSword">Customize</button></a>
+                            <a><button class="btn btn-primary" id="sword-download" style="display:none;" v-on:click="requestSword">Download Now!</button></a>
                         </div>
                     </div>
                 </div>
@@ -62,13 +63,14 @@
                         <div class="card-image">
                             <img src="images/sword.jpg">
                                 </div>
-                        <div class="card-content">
-                            <a class="card-header">Medieval Sword</a>
+                        <div class="card-content" id="guard">
+                            <a class="card-header">Wrist Guard</a>
                             <div class="card-meta">Submitted on August 21</div>
-                            <div class="card-description">A sharp sword to cut things with. Ooo pointy.</div>
+                            <div class="card-description">Guarding your life since 2020</div>
                         </div>
                         <div class="card-extra card-content" style="text-align:center">
-                            <a><button class="btn btn-primary" v-on:click="requestModel">Customize</button></a>
+                            <a><button class="btn btn-primary" id="guard-customize" v-on:click="customizeGuard">Customize</button></a>
+                            <a><button class="btn btn-primary" id="guard-download" style="display:none;" v-on:click="requestGuard">Download Now!</button></a>
                         </div>
                     </div>
                 </div>
@@ -79,13 +81,14 @@
                         <div class="card-image">
                             <img src="images/sword.jpg">
                                 </div>
-                        <div class="card-content">
+                        <div class="card-content" id="sword2">
                             <a class="card-header">Medieval Sword</a>
                             <div class="card-meta">Submitted on August 21</div>
                             <div class="card-description">A sharp sword to cut things with. Ooo pointy.</div>
                         </div>
                         <div class="card-extra card-content" style="text-align:center">
-                            <a><button class="btn btn-primary" v-on:click="requestModel">Customize</button></a>
+                            <a><button class="btn btn-primary" id="sword2-customize" v-on:click="customizeSword2">Customize</button></a>
+                            <a><button class="btn btn-primary" id="sword2-download" style="display:none;" v-on:click="requestSword">Download Now!</button></a>
                         </div>
                     </div>
                 </div>
@@ -98,6 +101,10 @@
     
     <script src="scripts/app.js"></script>
     
+    <script type="text/javascript">
+
+    </script>
+
     <!-- 3D STUFF!!! -->
     
     <script src="loadOBJ.js"></script>

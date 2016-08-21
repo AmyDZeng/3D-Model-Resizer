@@ -6,14 +6,24 @@ import time
 app = Flask(__name__)
 CORS(app)
 
-@app.route("/")
-def hello():
+@app.route("/sword/")
+def sword():
 	root_dir = os.path.dirname(os.path.realpath(__file__))
 	filename = 'model' + '_' + str(int(time.time())) + '.obj'
 	filepath = os.path.join(root_dir, 'generated', filename)
 
 	os.system('blender -b models/sword/sword.blend --python script.py -- ' + filepath)
 
+	response = make_response('http://10.71.134.218:5000/generated/' + filename)
+	return response
+
+@app.route("/guard/")
+def guard():
+	root_dir = os.path.dirname(os.path.realpath(__file__))
+	filename = 'model' + '_' + str(int(time.time())) + '.obj'
+	filepath = os.path.join(root_dir, 'generated', filename)
+
+	os.system('blender -b models/guard/guard.blend --python script.py -- ' + filepath)
 	response = make_response('http://10.71.134.218:5000/generated/' + filename)
 	return response
 
