@@ -1,18 +1,5 @@
 <!doctype html>
 <head><title>3D Model Resizer</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
-            <link rel="stylesheet" href="http://www.w3schools.com/lib/w3-theme-red.css">
-                <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.min.css">
-                    <style>
-                        body {
-                            background:#fff;
-                            padding:0;
-                            margin:0;
-                            font-weight: bold;
-                            overflow:hidden;
-                        }
-                    </style>
 </head>
 <body>
 	<link rel="stylesheet" href="styles/bootstrap.css">
@@ -22,16 +9,6 @@
     <!-- Header -->
 
     <div id="app">
-    <header class="w3-container w3-theme w3-padding" id="myHeader">
-        <i onclick="" class="fa fa-bars w3-xlarge w3-opennav"></i>
-        <div class="w3-center">
-            <h4>CUSTOMIZE YOUR 3D MODEL PROPS</h4>
-            <h1 class="w3-xxxlarge w3-animate-bottom">DO IT</h1>
-            <div class="w3-padding-32">
-                <button class="w3-btn w3-xlarge w3-theme-dark w3-hover-red" onclick="document.getElementById('id01').style.display='block'" style="font-weight:900;">TRY IT NOW</button>
-            </div>
-        </div>
-    </header>
 
 	<script src="scripts/jquery-3.1.0.js"></script>
 	<script src="scripts/bootstrap.min.js"></script>
@@ -49,6 +26,16 @@
     <script src="scripts/three.js"></script>
     <script src="js/loaders/OBJLoader.js"></script>
     
+	<nav class="navbar">
+		<div class="container">
+			<div class="navbar-header navbar-inverse">
+				<a data-push="true" class="logo" href="/">
+            		<img alt="Mountain Dew Logo" src="../images/dew-logo.svg">
+        		</a>
+				<a class="navbar-brand" href="#">3D Model Resizer</a>
+			</div>
+		</div>
+	</nav>
     <div class="container">
         {{ message }}
         <div class="row">
@@ -113,23 +100,6 @@
     
     <!-- 3D STUFF!!! -->
     
-    <script src="loadOBJ.js">
-        
-       
-    
-        </script>
-
-
-    
-    <footer class="w3-container w3-theme-dark">
-        <h3>Footer</h3>
-        <p>Powered by <a href="" target="_blank">Pepsi</a></p>
-        <div style="position:relative;bottom:55px;" class="w3-tooltip w3-right">
-            <span class="w3-text w3-theme w3-padding">Go To Top</span>&nbsp;
-            <a class="w3-text-white" href="#myHeader"><span class="w3-xlarge">
-                <i class="fa fa-chevron-circle-up"></i></span></a>
-        </div>
-        <p>Remember to check out our&nbsp;&nbsp;<a href="w3css_references.asp" class="w3-btn w3-theme" target="_blank">W3.CSS Reference</a></p>
-    </footer>
+    <script src="loadOBJ.js"></script>
 </body>
 
