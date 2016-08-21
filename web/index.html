@@ -58,6 +58,10 @@
                             <div class="card-meta">Submitted on August 21</div>
                             <div class="card-description">A sharp sword to cut things with. Ooo pointy.</div>
                         </div>
+                        <div class="card-content" id="sword-params" style="display:none;">
+                            <label for="length">Length:</label>
+                            <input type="number" required></input>
+                        </div>
                         <div class="card-extra card-content" style="text-align:center">
                             <a><button class="btn btn-primary" id="sword-customize" v-on:click="customizeSword">Customize</button></a>
                             <a><button class="btn btn-primary" id="sword-download" style="display:none;" v-on:click="requestSword">Download Now!</button></a>
@@ -76,6 +80,12 @@
                             <div class="card-meta">Submitted on August 21</div>
                             <div class="card-description">Guarding your life since 2020</div>
                         </div>
+                        <div class="card-content" id="guard-params" style="display:none;">
+                            <label for="wrist">Wrist Radius:</label>
+                            <input type="number" required></input>
+                            <label for="forearm">Forearm Radius:</label>
+                            <input type="number" required></input>
+                        </div>
                         <div class="card-extra card-content" style="text-align:center">
                             <a><button class="btn btn-primary" id="guard-customize" v-on:click="customizeGuard">Customize</button></a>
                             <a><button class="btn btn-primary" id="guard-download" style="display:none;" v-on:click="requestGuard">Download Now!</button></a>
@@ -93,6 +103,10 @@
                             <a class="card-header">Medieval Sword</a>
                             <div class="card-meta">Submitted on August 21</div>
                             <div class="card-description">A sharp sword to cut things with. Ooo pointy.</div>
+                        </div>
+                        <div class="card-content" id="sword2-params" style="display:none;">
+                            <label for="length">Length:</label>
+                            <input type="number" required></input>
                         </div>
                         <div class="card-extra card-content" style="text-align:center">
                             <a><button class="btn btn-primary" id="sword2-customize" v-on:click="customizeSword2">Customize</button></a>
