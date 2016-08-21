@@ -14,12 +14,14 @@ mesh = ob.data
 #filepath = os.path.join(root_dir, 'generated', 'model' + '_' + str(int(time.time())) + '.obj')
 
 filepath = argv[0]
+print('DEBUG ' + argv[1])
+length = int(argv[1])
 
 # Extend sword
 for vert in mesh.vertices:
 	new_location = vert.co
 	if new_location[0] > 0:
-		new_location[0] = new_location[0] + 1 #X
+		new_location[0] = new_location[0] + length #X
 		#new_location[1] = new_location[1] + 1 #Y
 		#new_location[2] = new_location[2] + 1 #Z
 		vert.co = new_location

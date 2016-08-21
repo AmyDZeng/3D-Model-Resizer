@@ -1,7 +1,10 @@
 new Vue({
     el: '#app',
     data: {
-        message: ''
+        message: '',
+        swordLength: 0,
+        wristRadius: 0,
+        forearmRadius: 0
     },
     methods: {
         requestSword: function() {
@@ -32,7 +35,7 @@ new Vue({
         customizeSword2: function () {
             var newHTML = '<div class="card-content">'+
                 '<label for="length">Length:</label>' + 
-                '<input type="number" required></input>'+
+                '<input type="number" v-model="swordLength" required></input>'+
                 '</div>';
             $('#sword2').replaceWith(newHTML);
             $('#sword2-customize').hide();
