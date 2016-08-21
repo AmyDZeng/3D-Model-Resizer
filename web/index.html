@@ -45,11 +45,71 @@
     
     <script src="js/libs/stats.min.js"></script>
     
-
-	<iframe id="download_frame" style="display:none;"></iframe>
-    
     <script src="scripts/three.js"></script>
     <script src="js/loaders/OBJLoader.js"></script>
+    
+    <div class="container">
+        {{ message }}
+        <div class="row">
+            <div class="col-sm-4">
+                <div class="bs-component">
+                    <div class="card">
+                        <div class="card-image">
+                            <img src="images/sword.jpg">
+                                </div>
+                        <div class="card-content">
+                            <a class="card-header">Medieval Sword</a>
+                            <div class="card-meta">Submitted on August 21</div>
+                            <div class="card-description">A sharp sword to cut things with. Ooo pointy.</div>
+                        </div>
+                        <div class="card-extra card-content" style="text-align:center">
+                            <a><i class="fa fa-user"></i><button class="btn btn-primary" v-on:click="requestModel">Customize</button></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-4">
+                <div class="bs-component">
+                    <div class="card">
+                        <div class="card-image">
+                            <img src="images/sword.jpg">
+                                </div>
+                        <div class="card-content">
+                            <a class="card-header">Medieval Sword</a>
+                            <div class="card-meta">Submitted on August 21</div>
+                            <div class="card-description">A sharp sword to cut things with. Ooo pointy.</div>
+                        </div>
+                        <div class="card-extra card-content" style="text-align:center">
+                            <a><i class="fa fa-user"></i><button class="btn btn-primary" v-on:click="requestModel">Customize</button></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-4">
+                <div class="bs-component">
+                    <div class="card">
+                        <div class="card-image">
+                            <img src="images/sword.jpg">
+                                </div>
+                        <div class="card-content">
+                            <a class="card-header">Medieval Sword</a>
+                            <div class="card-meta">Submitted on August 21</div>
+                            <div class="card-description">A sharp sword to cut things with. Ooo pointy.</div>
+                        </div>
+                        <div class="card-extra card-content" style="text-align:center">
+                            <a><i class="fa fa-user"></i><button class="btn btn-primary" v-on:click="requestModel">Customize</button></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+    
+    
+    <script src="scripts/app.js"></script>
+    
+    <!-- 3D STUFF!!! -->
     
     <script>
         
@@ -59,8 +119,8 @@
         
         var mouseX = 0, mouseY = 0;
         
-        var windowHalfX = window.innerWidth / 3;
-        var windowHalfY = window.innerHeight / 3;
+        var windowHalfX = window.innerWidth / 2;
+        var windowHalfY = window.innerHeight / 2;
         
         
         init();
@@ -70,6 +130,8 @@
         function init() {
             
             container = document.createElement( 'div' );
+            // container.setAttribute('style', 'border:1px solid black; width:122px; height:160px;');
+            
             document.body.appendChild( container );
             
             camera = new THREE.PerspectiveCamera( 45, window.innerWidth / window.innerHeight, 1, 2000 );
@@ -131,7 +193,7 @@
                                                     
                                                     } );
                                     
-                                    object.position.y = - 95;
+                                    object.position.y = 0;
                                     scene.add( object );
                                     
                                     }, onProgress, onError );
@@ -140,7 +202,8 @@
                                     
                                     renderer = new THREE.WebGLRenderer();
                                     renderer.setPixelRatio( window.devicePixelRatio );
-                                    renderer.setSize( window.innerWidth, window.innerHeight );
+                                    renderer.setSize( window.innerWidth * 0.75 , window.innerHeight * 0.75 );
+                                    
                                     container.appendChild( renderer.domElement );
                                     
                                     document.addEventListener( 'mousemove', onDocumentMouseMove, false );
@@ -191,30 +254,7 @@
     
         </script>
 
-	<div class="container">
-	{{ message }}
-	<div class="row">
-		<div class="col-sm-4">
-			<div class="bs-component">
-				<div class="card">
-					<div class="card-image">
-						<img src="images/sword.jpg">
-					</div>
-					<div class="card-content">
-						<a class="card-header">Medieval Sword</a>
-						<div class="card-meta">Submitted on August 21</div>
-						<div class="card-description">A sharp sword to cut things with. Ooo pointy.</div>
-					</div>
-					<div class="card-extra card-content" style="text-align:center">
-						<a><i class="fa fa-user"></i><button class="btn btn-primary" v-on:click="requestModel">Customize</button></a>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-	</div>
 
-	<script src="scripts/app.js"></script>
     
     <footer class="w3-container w3-theme-dark">
         <h3>Footer</h3>
