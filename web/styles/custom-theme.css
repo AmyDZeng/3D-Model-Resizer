@@ -10,6 +10,17 @@
 
 #app {
 	font-size: 14px;
+	background-image: url("../images/texture-light.jpg");
+}
+
+.bs-divider {
+	margin: 20px 0;
+	border: 0;
+	display: table;
+	white-space: nowrap;
+	font-size: 2em;
+	font-family: "Tungsten A", sans-serif;
+	color: #20900b;
 }
 
 .logo {

@@ -2,10 +2,10 @@
 <head>
     <title>3D Model Resizer</title>
     <style>
-        body {
+        #watermark {
             background-image: url("images/dewloader.png");
             background-repeat: repeat-y;
-            animation: animate_background 2s linear 0s infinite;
+            animation: animate_background 6s linear 0s infinite;
         }
     @keyframes animate_background {
         from {
@@ -47,6 +47,7 @@
     <script src="js/loaders/OBJLoader.js"></script>
     
     <div id="app">
+    <div id="watermark">
 	<nav class="navbar">
 		<div class="container">
 			<div class="navbar-header navbar-inverse">
@@ -130,6 +131,10 @@
             </div>
         </div>
         
+
+		<div class="bs-divider">Cool Creations</div>
+
+
         <div class="bs-component">
             <div class="card">
                 
@@ -148,7 +153,8 @@
         
     </div>
     </div>
-    
+    </div>
+
     <script src="scripts/app.js"></script>
     
 
