@@ -1,0 +1,14 @@
+.navbar {
+	position: relative;
+	min-height: 50px;
+	margin-bottom: 20px;
+	border: 1px solid transparent;
+	border-bottom: 1px solid #d0d4d9;
+	box-shadow: 0px 1px 1px #d0d4d9;
+	background: #ffffff;
+}
+
+body {
+	font-size: 14px;
+	background: #fbfbfb;
+}

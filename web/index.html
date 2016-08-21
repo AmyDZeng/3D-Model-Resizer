@@ -3,28 +3,45 @@
 <body>
 	<link rel="stylesheet" href="styles/bootstrap.css">
 	<link rel="stylesheet" href="styles/smt-bootstrap.css">
-
+	<link rel="stylesheet" href="styles/custom-theme.css">
 	<script src="scripts/jquery-3.1.0.js"></script>
 	<script src="scripts/bootstrap.min.js"></script>
 	<script src="scripts/vue.js"></script>
 	<script src="scripts/vue-resource.min.js"></script>
-
 	<iframe id="download_frame" style="display:none;"></iframe>
 
-	<nav class="navbar navbar-inverse">
+	<div id="app">
+	<nav class="navbar">
 		<div class="container">
 			<div class="navbar-header">
 				<a class="navbar-brand" href="#">3D Model Resizer</a>
 			</div>
 		</div>
 	</nav>
-
+	<div id="background">
 	<div class="container">
-		<div id="app">
-			{{ message }}
-			<button v-on:click="requestModel">Get</button>
+	{{ message }}
+	<div class="row">
+		<div class="col-sm-4">
+			<div class="bs-component">
+				<div class="card">
+					<div class="card-image">
+						<img src="images/sword.jpg">
+					</div>
+					<div class="card-content">
+						<a class="card-header">Medieval Sword</a>
+						<div class="card-meta">Submitted on August 21</div>
+						<div class="card-description">A sharp sword to cut things with. Ooo pointy.</div>
+					</div>
+					<div class="card-extra card-content" style="text-align:center">
+						<a><i class="fa fa-user"></i><button class="btn btn-primary" v-on:click="requestModel">Customize</button></a>
+					</div>
+				</div>
+			</div>
 		</div>
+	</div>
 	</div>
 
 	<script src="scripts/app.js"></script>
 </body>
+
