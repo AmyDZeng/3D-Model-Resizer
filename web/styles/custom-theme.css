@@ -10,7 +10,6 @@
 
 #app {
 	font-size: 14px;
-	background-image: url("../images/texture-light.jpg");
 }
 
 .logo {
@@ -41,12 +40,19 @@
 	text-transform: uppercase;
 }
 
+.card > .card-content > a.card-header, .cards > .card > .card-content > a.card-header {
+	color: rgba(0,0,0,0.85);
+	font-size: 16px;
+	font-family: "Vitesse", sans-serif;
+}
+
 .btn-primary:hover, .btn-primary:active, .btn-primary:hover:active, .btn-primary:focus, .btn-primary.active {
 	background-color: #20900b;
 }
 
 .btn-primary {
 	background-color: #5cbc4a;
+	font-family: "Vitesse", sans-serif;
 }
 
 @font-face {
@@ -54,4 +60,11 @@
 	font-style: normal;
 	font-weight: 500;
 	src: url("../fonts/Tungsten-Medium.otf") format("opentype");
+}
+
+@font-face {
+	font-family: "Vitesse";
+	font-style: normal;
+	font-weight: 500;
+	src: url("../fonts/Vitesse-Medium.otf") format("opentype");
 }

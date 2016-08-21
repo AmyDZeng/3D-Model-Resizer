@@ -12,7 +12,9 @@ def sword():
 	filename = 'model' + '_' + str(int(time.time())) + '.obj'
 	filepath = os.path.join(root_dir, 'generated', filename)
 
-	os.system('blender -b models/sword/sword.blend --python script.py -- ' + filepath)
+	length = request.args.get('length')
+	print('LENGTH is ' + str(length))
+	os.system('blender -b models/sword/sword.blend --python script.py -- ' + filepath + ' ' + str(length))
 
 	response = make_response('http://10.71.134.218:5000/generated/' + filename)
 	return response
@@ -23,7 +25,7 @@ def guard():
 	filename = 'model' + '_' + str(int(time.time())) + '.obj'
 	filepath = os.path.join(root_dir, 'generated', filename)
 
-	os.system('blender -b models/guard/guard.blend --python script.py -- ' + filepath)
+	os.system('blender -b models/guard/guard.blend --python guard_scaling.py -- ' + filepath)
 	response = make_response('http://10.71.134.218:5000/generated/' + filename)
 	return response
 

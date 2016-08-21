@@ -1,7 +1,10 @@
 new Vue({
     el: '#app',
     data: {
-        message: ''
+        message: '',
+        swordLength: 0,
+        wristRadius: 0,
+        forearmRadius: 0
     },
     methods: {
         requestSword: function() {
