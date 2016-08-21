@@ -1,5 +1,21 @@
 <!doctype html>
-<head><title>3D Model Resizer</title>
+<head>
+    <title>3D Model Resizer</title>
+    <style>
+        body {
+            background-image: url("images/dewloader.png");
+            background-repeat: repeat-y;
+            animation: animate_background 1s linear 0s infinite;
+        }
+    @keyframes animate_background {
+        from {
+            background-position: 0 0;
+        }
+        to {
+            background-position: 0 -200px;
+        } 
+    }
+    </style>
 </head>
 <body>
 	<link rel="stylesheet" href="styles/bootstrap.css">
@@ -8,6 +24,8 @@
         <link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
             <link rel="stylesheet" href="http://www.w3schools.com/lib/w3-theme-teal.css">
                 <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.min.css">
+
+
 
     <!-- Header -->
 
@@ -40,8 +58,6 @@
 			</div>
 		</div>
 	</nav>
-    
-    
     
     
     <div class="container">
@@ -105,17 +121,21 @@
         
         <hr>
         
-        <h2 class="w3-center">Examples</h2>
         
-        <div class="w3-content" style="max-width:800px;position:relative">
+        <div class="bs-component">
+            <div class="card">
+                
+                <div class="w3-content" style="max-width:800px;position:relative">
             
-            <img class="mySlides w3-animate-opacity" src="images/prop1.jpg" style="width: 100%; display: block;">
+                <img class="mySlides w3-animate-opacity" src="images/prop1.jpg" style="width: 100%; display: block;">
                 <img class="mySlides w3-animate-opacity" src="images/prop2.jpg" style="width: 100%; display: none;">
-                    <img class="mySlides w3-animate-opacity" src="images/prop3.jpg" style="width: 100%; display: none;">
-                        <img class="mySlides w3-animate-opacity" src="images/prop4.jpg" style="width: 100%; display: none;">
+                <img class="mySlides w3-animate-opacity" src="images/prop3.jpg" style="width: 100%; display: none;">
+                <img class="mySlides w3-animate-opacity" src="images/prop4.jpg" style="width: 100%; display: none;">
                             
-                            <a class="w3-btn-floating w3-hover-dark-grey" style="position:absolute;top:45%;left:0;" onclick="plusDivs(-1)"><</a>
-                            <a class="w3-btn-floating w3-hover-dark-grey" style="position:absolute;top:45%;right:0;" onclick="plusDivs(+1)">></a>
+                <a class="w3-btn-floating w3-hover-dark-grey" style="position:absolute;top:45%;left:0;" onclick="plusDivs(-1)"><</a>
+                <a class="w3-btn-floating w3-hover-dark-grey" style="position:absolute;top:45%;right:0;" onclick="plusDivs(+1)">></a>
+                    </div>
+            </div>
         </div>
         
         <hr>
