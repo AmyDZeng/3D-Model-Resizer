@@ -6,6 +6,3 @@ There's nothing cooler than seeing your favorite iconic characters coming to lif
 
 ## Next Steps
 With a little bit of preprocessing, we can let any 3D modeler upload their models to our web service and have them dynamically fitted in no time! We hope to grow our collection of available models and make 3D printing much easier and more accessible for everyone. As it grows we hope to make it a common tool in every 3D artists arsenal.
-
-
-_Special shoutout to Pepsi for the Dew_
